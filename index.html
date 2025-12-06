@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA + Supabase Auth</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+
+    <h1>CJ LAJES</h1>
+
+    <div id="calculator">
+        <div class="input-area">
+            <input id="price-input" type="text" placeholder="Valor Por Metro">
+            <div class="input-label" id="label-m">M</div>
+        </div>
+
+        <div class="input-area">
+            <input id="cal-width" type="number" placeholder="Largura">
+            <div class="input-label">L</div>
+        </div>
+        <div class="input-area">
+            <input id="cal-length" type="number" placeholder="Comprimento">
+            <div class="input-label" id="label-c">C</div>
+        </div>
+        <!-- From Uiverse.io by JaydipPrajapati1910 -->
+        <div id="toggle-area">
+            <div id="toggle-label">Vigas pela:</div>
+            <div class="toggle-button-cover">
+                <div id="button-3" class="button r">
+                    <input id="cal-check" class="checkbox" type="checkbox">
+                    <div class="knobs"></div>
+                    <div class="layer"></div>
+                </div>
+            </div>
+        </div>
+        <button id="calculator-btn">Calcular</button>
+    </div>
+
+    <div id="results">
+        <div class="values">
+            <strong>Área em m²:</strong>
+            <div id="m2"></div>
+        </div>
+        <div class="values">
+            <strong>Quantidade de vigas:</strong>
+            <div id="beam"></div>
+        </div>
+        <div class="values">
+            <strong>Quantidade de Isopor:</strong>
+            <div id="styrofoam"></div>
+        </div>
+        <div class="values">
+            <strong>Valor a Cobrar:</strong>
+            <div id="amount"></div>
+        </div>
+    </div>
+
+    <script type="module" src="/scripts/calculator.js"></script>
+</body>
+
+</html>

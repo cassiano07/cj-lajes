@@ -1,0 +1,237 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    background-color: white;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    color: #b7410e;
+}
+
+#calculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 250px;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    gap: 10px
+}
+
+.input-label {
+    width: 30px !important;
+    height: 30px !important;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #03a9f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+#label-c {
+    background-color: #f44336;
+}
+
+#label-m {
+    background-color: black;
+}
+
+input {
+    box-sizing: border-box;
+    appearance: none;
+
+    border: 0px;
+    background-color: #e8e8e8;
+    padding: 10px;
+    border-radius: 10px;
+    height: 45px;
+    /* width: 100%; */
+    flex: 1
+}
+
+button {
+    background: #b7410e;
+    cursor: pointer;
+    border: 0px;
+    height: 45px;
+    border-radius: 10px;
+    width: 100%;
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: 10px;
+
+    /* 🔥 animação suave */
+    transition: background-color 0.2s ease, transform 0.15s ease,
+        opacity 0.2s ease;
+}
+
+button:active {
+    background-color: #9d360a;
+    transform: scale(0.97);
+    /* leve efeito de pressão */
+}
+
+#results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 250px;
+    margin-top: 20px;
+}
+
+.values {
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+
+#toggle-area {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#toggle-label {
+    font-size: 14px;
+    flex: 1;
+    padding: 10px;
+}
+
+
+/* From Uiverse.io by JaydipPrajapati1910 */
+.toggle-button-cover {
+    display: table-cell;
+    position: relative;
+    width: 100px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.button-cover {
+    height: 100px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px -8px #c5d6d6;
+    border-radius: 4px;
+}
+
+.button-cover:before {
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.button-cover,
+.knobs,
+.layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button {
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+}
+
+.checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs {
+    z-index: 2;
+}
+
+.layer {
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+.button.r,
+.button.r .layer {
+    border-radius: 100px;
+}
+
+#button-3 .knobs:before {
+    content: "L";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 10px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: #03a9f4;
+    border-radius: 50%;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+}
+
+#button-3 .checkbox:active+.knobs:before {
+    width: 46px;
+    border-radius: 100px;
+}
+
+#button-3 .checkbox:checked:active+.knobs:before {
+    margin-left: -26px;
+}
+
+#button-3 .checkbox:checked+.knobs:before {
+    content: "C";
+    left: 42px;
+    background-color: #f44336;
+}
+
+#button-3 .checkbox:checked~.layer {
+    background-color: #fcebeb;
+}
