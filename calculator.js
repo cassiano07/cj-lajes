@@ -35,7 +35,12 @@ function getCurrencyNumber(formattedValue) {
 const calculatorBtn = document.getElementById("calculator-btn");
 const results = document.getElementById("results");
 
-const formatNumber = (value) => Number(value).toFixed(2);
+const formatNumber = (value) => {
+    return Number(value).toLocaleString('pt-BR', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+};
 
 const formatCurrency = (value) =>
     Number(value).toLocaleString('pt-BR', {
